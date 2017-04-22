@@ -8,8 +8,10 @@
 
 #define WORD_SIZE 11
 
+/* functions promises that will not change the value of the dereferenced pointer */
 int cmpstrings(const void *a, const void *b)
 {
+        /* casting to a pointer to a constat pointer of char */
         return strcmp(*(char * const *)a, *(char * const *)b);
 }
 
@@ -63,3 +65,4 @@ int main(void)
 
         return 0;
 }
+
